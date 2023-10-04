@@ -12,18 +12,18 @@ struct UsageHistoryTicketCreatePage: View {
     @State private var ticketSubject: String = ""
     @State private var messageData: String = ""
     var body: some View {
-        
         VStack{
-            TextFieldTitleAtUsageHistory(text: "Customer ID")
-                .padding(.vertical, 10)
-            TextField("Enter Customer ID Here", text: $customerID)
-            .UseageHistoryTextFieldDesign(RectangeHeight: 57.7)
+            VStack {
+                TextFieldTitleAtUsageHistory(text: "Customer ID")
+                    .padding(.vertical, 10)
+                TextField("Enter Customer ID Here", text: $customerID)
+                    .UseageHistoryTextFieldDesign(RectangeHeight: 57.7)
                 
-            TextFieldTitleAtUsageHistory(text: "Subject")
-                .padding(.vertical, 10)
-            TextField("Enter your subject Here", text: $ticketSubject)
-                .UseageHistoryTextFieldDesign(RectangeHeight: 57.7)
-            
+                TextFieldTitleAtUsageHistory(text: "Subject")
+                    .padding(.vertical, 10)
+                TextField("Enter your subject Here", text: $ticketSubject)
+                    .UseageHistoryTextFieldDesign(RectangeHeight: 57.7)
+            }
             
             TextFieldTitleAtUsageHistory(text: "Message")
                 .padding(.top, 10)
@@ -62,8 +62,7 @@ struct UsageHistoryTicketCreatePage: View {
             Spacer()
             }.padding(.horizontal)
                 .padding(.vertical, 10)
-            
-            Button{
+                        Button{
                 
             }label: {
                 RoundedRectangle(cornerRadius: 15)
@@ -75,7 +74,8 @@ struct UsageHistoryTicketCreatePage: View {
                     )
                     .frame(height: 35.51)
             }.padding(.horizontal, 10)
-            
+                .padding(.top)
+            Spacer()
             VStack(alignment: .center){
                 Text("Support 24/7 Days")
                     .font(.custom(FontManager.Poppins.medium, size: 11))
@@ -97,6 +97,7 @@ struct UsageHistoryTicketCreatePage: View {
                     
                 }
             }
+            Spacer()
         }
     }
 }
