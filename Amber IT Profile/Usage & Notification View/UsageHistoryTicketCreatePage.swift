@@ -45,11 +45,23 @@ struct UsageHistoryTicketCreatePage: View {
                         .opacity(messageData.isEmpty ? 0.85 : 1)
                     Spacer()
                 }
-            }
-//            Rectangle()
-//                .stroke(.white, style: StrokeStyle(lineWidth: 1.5, dash: [3, 3]))
-//                .foregroundColor(.white)
+            }.frame(height: 99.0)
+            HStack{
+                Button{
+                    
+                }label: {
+                    Text("Choose File")
+                        .font(.custom(FontManager.Poppins.semiBold, size: 14))
+                        .padding(12)
+                        .foregroundColor(Color.white)
+                        .background(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.white, style: StrokeStyle(lineWidth: 1.5, dash: [3, 3]))
+                        )
 
+                }
+            Spacer()
+            }.padding(.horizontal)
         }
     }
 }
