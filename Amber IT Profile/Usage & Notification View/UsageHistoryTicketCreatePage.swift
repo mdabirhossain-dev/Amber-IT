@@ -90,11 +90,8 @@ struct UsageHistoryTicketCreatePage: View {
                     Image("24to7")
                         .resizable()
                         .frame(width: 26, height: 26)
-                        
-                    
                         Text("+88016xxxxxxx")
                         .font(.custom(FontManager.Poppins.semiBold, size: 20))
-                    
                 }
             }
             Spacer()
