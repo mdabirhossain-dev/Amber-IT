@@ -11,7 +11,10 @@ import SwiftUI
 struct Amber_IT_ProfileApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ProfileView()
+            }
+            .preferredColorScheme(.dark)
         }
     }
 }

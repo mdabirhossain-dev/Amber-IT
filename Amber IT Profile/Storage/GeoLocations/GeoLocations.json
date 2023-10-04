@@ -1,0 +1,62 @@
+{
+    "data": [
+        {
+            "countryName": "Bangladesh",
+            "city": [
+                {
+                    "cityName": "Dhaka",
+                    "area" : [
+                        "Mirpur",
+                        "Uttara",
+                        "Dhanmondi",
+                        "Kalabagan",
+                        "New Market",
+                        "Kalshi",
+                        "Badda"
+                    ]
+                },
+                {
+                    "cityName": "Khulna",
+                    "area" : [
+                        "Jhenaidah",
+                        "Kushtia",
+                        "Magura",
+                        "Jhenaidah",
+                        "Sathkhira"
+                    ]
+                },
+                {
+                    "cityName": "Rajsahi",
+                    "area" : [
+                        "Pabna",
+                        "Bogura"
+                    ]
+                },
+                {
+                    "cityName": "Rangpur",
+                    "area" : [
+                        "Rangpur",
+                        "Panchagarh"
+                    ]
+                },
+                {
+                    "cityName": "Sylhet",
+                    "area" : [
+                        "Sylhet",
+                        "Majar"
+                    ]
+                }
+            ]
+        },
+        { "countryName": "India" },
+        { "countryName": "Pakisthan" },
+        { "countryName": "Shrilanka" },
+        { "countryName": "Nepal" },
+        { "countryName": "Bhutan" },
+        { "countryName": "Argentina" },
+        { "countryName": "Brazil" },
+        { "countryName": "Mongolia" },
+        { "countryName": "Africa" },
+        { "countryName": "Ukraine" }
+    ]
+}
