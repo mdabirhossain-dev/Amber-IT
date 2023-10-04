@@ -58,16 +58,16 @@ struct UsageHistoryTicketCreatePage: View {
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color.white, style: StrokeStyle(lineWidth: 1.5, dash: [3, 3]))
                         )
-
                 }
             Spacer()
             }.padding(.horizontal)
+                .padding(.vertical, 10)
             
             Button{
                 
             }label: {
                 RoundedRectangle(cornerRadius: 15)
-                    .foregroundColor(.red)
+                    .foregroundColor(Color(red: 1, green: 0, blue: 0))
                     .overlay(
                         Text("Send")
                             .font(.custom(FontManager.Poppins.semiBold, size: 20))
@@ -75,6 +75,28 @@ struct UsageHistoryTicketCreatePage: View {
                     )
                     .frame(height: 35.51)
             }.padding(.horizontal, 10)
+            
+            VStack(alignment: .center){
+                Text("Support 24/7 Days")
+                    .font(.custom(FontManager.Poppins.medium, size: 11))
+                    .foregroundColor(.black)
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(Color(red: 0.85, green: 0.85, blue: 0.85))
+                            .frame(width: 130, height: 18)
+                    )
+                
+                HStack{
+                    Image("24to7")
+                        .resizable()
+                        .frame(width: 26, height: 26)
+                        
+                    
+                        Text("+88016xxxxxxx")
+                        .font(.custom(FontManager.Poppins.semiBold, size: 20))
+                    
+                }
+            }
         }
     }
 }

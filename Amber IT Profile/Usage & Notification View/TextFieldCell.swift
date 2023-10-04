@@ -7,23 +7,6 @@
 
 import SwiftUI
 
-//struct TextFieldCell: View {
-//    @State private var text: String = ""
-//    var body: some View {
-//        VStack{
-//            TextFieldTitleAtUsageHistory(text: "Customer ID")
-//            TextField("Enter Customer ID Here", text: $text)
-//                .UseageHistoryTextFieldDesign(RectangeHeight: 57.7)
-//        }
-//    }
-//}
-//
-//struct TextFieldCell_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TextFieldCell()
-//    }
-//}
-//
 
 struct TextFieldTitleAtUsageHistory: View {
     var text: String
