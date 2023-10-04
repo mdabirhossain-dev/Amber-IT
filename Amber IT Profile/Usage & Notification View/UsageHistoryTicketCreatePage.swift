@@ -62,6 +62,19 @@ struct UsageHistoryTicketCreatePage: View {
                 }
             Spacer()
             }.padding(.horizontal)
+            
+            Button{
+                
+            }label: {
+                RoundedRectangle(cornerRadius: 15)
+                    .foregroundColor(.red)
+                    .overlay(
+                        Text("Send")
+                            .font(.custom(FontManager.Poppins.semiBold, size: 20))
+                            .foregroundColor(.white)
+                    )
+                    .frame(height: 35.51)
+            }.padding(.horizontal, 10)
         }
     }
 }
