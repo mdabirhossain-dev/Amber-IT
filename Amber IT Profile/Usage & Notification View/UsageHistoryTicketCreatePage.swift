@@ -15,16 +15,20 @@ struct UsageHistoryTicketCreatePage: View {
         
         VStack{
             TextFieldTitleAtUsageHistory(text: "Customer ID")
+                .padding(.vertical, 10)
             TextField("Enter Customer ID Here", text: $customerID)
             .UseageHistoryTextFieldDesign(RectangeHeight: 57.7)
                 
             TextFieldTitleAtUsageHistory(text: "Subject")
+                .padding(.vertical, 10)
             TextField("Enter your subject Here", text: $ticketSubject)
                 .UseageHistoryTextFieldDesign(RectangeHeight: 57.7)
             
+            
             TextFieldTitleAtUsageHistory(text: "Message")
-            TextField("Enter Max 250 Charecter", text: $messageData)
-                .frame(height: 98.8)
+                .padding(.top, 10)
+            TextEditor(text: $messageData)
+                .frame(height: 98)
                 .UseageHistoryTextFieldDesign(RectangeHeight: 98.8)
             
         }
