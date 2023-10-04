@@ -27,10 +27,29 @@ struct UsageHistoryTicketCreatePage: View {
             
             TextFieldTitleAtUsageHistory(text: "Message")
                 .padding(.top, 10)
-            TextEditor(text: $messageData)
-                .frame(height: 98)
-                .UseageHistoryTextFieldDesign(RectangeHeight: 98.8)
             
+            ZStack(alignment: .leading) {
+                if messageData.isEmpty {
+                    VStack {
+                        Text("Enter Max 250 Charecter")
+                            .padding(.top, 10)
+                            .padding(.leading, 27)
+                            .opacity(0.7)
+                        Spacer()
+                    }
+                }
+                VStack {
+                    TextEditor(text: $messageData)
+                        .frame(height: 98)
+                        .UseageHistoryTextFieldDesign(RectangeHeight: 98.8)
+                        .opacity(messageData.isEmpty ? 0.85 : 1)
+                    Spacer()
+                }
+            }
+//            Rectangle()
+//                .stroke(.white, style: StrokeStyle(lineWidth: 1.5, dash: [3, 3]))
+//                .foregroundColor(.white)
+
         }
     }
 }
