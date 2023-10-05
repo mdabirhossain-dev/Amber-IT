@@ -17,23 +17,7 @@ struct AppSettingsView: View {
     // MARK: - Body
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            VStack(alignment: .leading) {
-                // NavigationBar
-                HStack(spacing: 11) {
-                    Button {
-                        // Dismissing from this view
-                        presentation.wrappedValue.dismiss()
-                    } label: {
-                        Image("arrow-left")
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                    }
-                    
-                    Text("App Setting")
-                        .font(.custom(FontManager.Poppins.semiBold, size: 18))
-                }
-                .frame(maxWidth: .infinity, maxHeight: 40, alignment: .leading)
-                
+            VStack(alignment: .leading) {                
                 VStack(alignment: .center, spacing: 25) {
                     // Title
                     HStack(spacing: 14) {
@@ -152,6 +136,22 @@ struct AppSettingsView: View {
             .padding(.leading, 11)
             .foregroundColor(Color.white)
             .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading:
+            HStack(spacing: 5) {
+                Button {
+                    // Dismissing from this view
+                    presentation.wrappedValue.dismiss()
+                } label: {
+                    Image("arrow-left")
+                        .resizable()
+                        .frame(width: 24, height: 24)
+                }
+                
+                Text("App Setting")
+                    .font(.custom(FontManager.Poppins.semiBold, size: 18))
+            }
+
+            )
         }
     }
 }
