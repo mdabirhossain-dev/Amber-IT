@@ -11,6 +11,7 @@ struct UsageHistoryTicketCreatePage: View {
     @State private var customerID: String = ""
     @State private var ticketSubject: String = ""
     @State private var messageData: String = ""
+    @State private var openFile: Bool = false
     var body: some View {
         VStack{
             VStack {
@@ -49,7 +50,7 @@ struct UsageHistoryTicketCreatePage: View {
             }.frame(height: 99.0)
             HStack{
                 Button{
-                    
+                    openFile = true
                 }label: {
                     Text("Choose File")
                         .font(.custom(FontManager.Poppins.semiBold, size: 14))
@@ -97,7 +98,22 @@ struct UsageHistoryTicketCreatePage: View {
                 }
             }
             Spacer()
+            
         }
+        .fileImporter( isPresented: $openFile, allowedContentTypes: [.item], allowsMultipleSelection: false, onCompletion: {
+            (Result) in
+            
+            do{
+//                let fileURL = try Result.get()
+//                print(fileURL)
+//                self.fileName = fileURL.first?.lastPathComponent ?? "file not available"
+                print("File is being attatched here")
+            }
+//            catch{
+//                print("error reading file \(error.localizedDescription)")
+//            }
+            
+        })
     }
 }
 
