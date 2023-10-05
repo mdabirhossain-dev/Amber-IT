@@ -110,15 +110,15 @@ struct ProfileView: View {
                         
                         VStack {
                             if isShowInformation {
-                                NavigationLink(destination: AppSettingsView()) {
+                                NavigationLink(destination: Terms_And_Conditions().navigationBarBackButtonHidden(true)) {
                                     ProfileInformationExpandableView(title: "T&C")
                                 }
                                 
-                                NavigationLink(destination: AppSettingsView()) {
+                                NavigationLink(destination: FrequentlyAskQuestions()) {
                                     ProfileInformationExpandableView(title: "FAQ")
                                 }
                                 
-                                NavigationLink(destination: AppSettingsView()) {
+                                NavigationLink(destination: PrivacyNotice()) {
                                     ProfileInformationExpandableView(title: "Privacy Notice")
                                 }
                             }
