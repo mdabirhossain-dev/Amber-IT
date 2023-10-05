@@ -58,6 +58,7 @@
 		10EE525D2ACEA92300704830 /* DeviceInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE524C2ACEA92200704830 /* DeviceInfos.swift */; };
 		10EE52612ACEAA4A00704830 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE525F2ACEAA4A00704830 /* RoundedCorner.swift */; };
 		10EE52622ACEAA4A00704830 /* StepGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE52602ACEAA4A00704830 /* StepGradientView.swift */; };
+		10EE52642ACEC4ED00704830 /* PackageFormSubmissionPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE52632ACEC4ED00704830 /* PackageFormSubmissionPopUpView.swift */; };
 		881100E22ACD74EC008536BE /* UsageHistoryAllTickets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881100E12ACD74EC008536BE /* UsageHistoryAllTickets.swift */; };
 		881100E42ACD7DEA008536BE /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881100E32ACD7DEA008536BE /* NotificationsView.swift */; };
 		881100E62ACD84AC008536BE /* FeedBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881100E52ACD84AC008536BE /* FeedBackView.swift */; };
@@ -120,6 +121,7 @@
 		10EE524C2ACEA92200704830 /* DeviceInfos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfos.swift; sourceTree = "<group>"; };
 		10EE525F2ACEAA4A00704830 /* RoundedCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		10EE52602ACEAA4A00704830 /* StepGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepGradientView.swift; sourceTree = "<group>"; };
+		10EE52632ACEC4ED00704830 /* PackageFormSubmissionPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageFormSubmissionPopUpView.swift; sourceTree = "<group>"; };
 		881100E12ACD74EC008536BE /* UsageHistoryAllTickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageHistoryAllTickets.swift; sourceTree = "<group>"; };
 		881100E32ACD7DEA008536BE /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		881100E52ACD84AC008536BE /* FeedBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackView.swift; sourceTree = "<group>"; };
@@ -206,12 +208,12 @@
 		10EE51F82ACEA8B100704830 /* SubView */ = {
 			isa = PBXGroup;
 			children = (
+				10EE52032ACEA8B100704830 /* Package */,
 				10EE51FC2ACEA8B100704830 /* TextField */,
 				10EE51FF2ACEA8B100704830 /* Navigationbar */,
 				10EE51F92ACEA8B100704830 /* ProfileOptionView.swift */,
 				10EE51FA2ACEA8B100704830 /* PackageDataInputView.swift */,
 				10EE51FB2ACEA8B100704830 /* CalenderView.swift */,
-				10EE52032ACEA8B100704830 /* Package */,
 			);
 			path = SubView;
 			sourceTree = "<group>";
@@ -243,6 +245,7 @@
 				10EE52062ACEA8B100704830 /* PackageRegistrationFormView.swift */,
 				10EE52072ACEA8B100704830 /* PackageListView.swift */,
 				10EE52082ACEA8B100704830 /* PackageCardView.swift */,
+				10EE52632ACEC4ED00704830 /* PackageFormSubmissionPopUpView.swift */,
 			);
 			path = Package;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				88283D512ACE892E000E73B2 /* UsageHistorySupportPage.swift in Sources */,
 				10EE52612ACEAA4A00704830 /* RoundedCorner.swift in Sources */,
 				10EE524D2ACEA92200704830 /* DateFormatter.swift in Sources */,
+				10EE52642ACEC4ED00704830 /* PackageFormSubmissionPopUpView.swift in Sources */,
 				10EE52152ACEA8B100704830 /* ProfileTextFiledView.swift in Sources */,
 				10EE52212ACEA8B100704830 /* AppSettingsView.swift in Sources */,
 				10EE522E2ACEA8D400704830 /* Package.swift in Sources */,

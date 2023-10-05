@@ -110,7 +110,7 @@ struct UsageHistorySupportPage: View {
             }
             
             ToolbarItem(placement: .navigationBarTrailing) {
-                NavigationBarTrailing(gotoNotificationView: $gotoNotificationView)
+//                NavigationBarTrailing(gotoNotificationView: $gotoNotificationView)
             }
         }
     }

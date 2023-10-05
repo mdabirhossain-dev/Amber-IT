@@ -61,20 +61,20 @@ struct EditProfileView: View {
                 }
                 VStack {
                     // Navigation Bar
-                    //            NavigationBar(content: {
-                    //                Button {
-                    //                    // Dismissing from this view
-                    //                    presentation.wrappedValue.dismiss()
-                    //                } label: {
-                    //                    Image("arrow-left")
-                    //                        .resizable()
-                    //                        .frame(width: 24, height: 24)
-                    //                }
-                    //
-                    //
-                    //                Text("User Profile Edit")
-                    //                    .font(.custom(FontManager.Poppins.semiBold, size: 18))
-                    //            })
+//            NavigationBar(content: {
+//                Button {
+//                    // Dismissing from this view
+//                    presentation.wrappedValue.dismiss()
+//                } label: {
+//                    Image("arrow-left")
+//                        .resizable()
+//                        .frame(width: 24, height: 24)
+//                }
+//
+//
+//                Text("User Profile Edit")
+//                    .font(.custom(FontManager.Poppins.semiBold, size: 18))
+//            })
                     
                     ScrollView(.vertical, showsIndicators: false) {
                         // Profile Image
@@ -333,7 +333,7 @@ struct EditProfileView: View {
             }
             
             ToolbarItem(placement: .navigationBarTrailing) {
-                NavigationBarTrailing(gotoNotificationView: $gotoNotificationView)
+//                NavigationBarTrailing(gotoNotificationView: $gotoNotificationView)
             }
         }
 

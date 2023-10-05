@@ -44,6 +44,9 @@ struct PackageRegistrationFormView: View {
     }
     
     
+    // PackageSubmissionPopUp
+    @Binding var isPackageSubmitted: Bool
+    
     
     // MARK: - Body
     var body: some View {
@@ -296,7 +299,9 @@ struct PackageRegistrationFormView: View {
                 .font(.custom(FontManager.Poppins.regular, size: 10))
                 
                 Button {
-                    
+                    withAnimation {
+                        isPackageSubmitted = true
+                    }
                 } label: {
                     Text("SUBMIT")
                         .font(.custom(FontManager.Poppins.semiBold, size: 20))
@@ -311,7 +316,8 @@ struct PackageRegistrationFormView: View {
 }
 
 struct PackageRegistrationFormView_Previews: PreviewProvider {
+    @State static var isPackageSubmitted = false
     static var previews: some View {
-        PackageRegistrationFormView()
+        PackageRegistrationFormView(isPackageSubmitted: $isPackageSubmitted)
     }
 }
