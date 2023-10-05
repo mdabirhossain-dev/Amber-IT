@@ -193,7 +193,6 @@
 		10EE51F32ACEA8B100704830 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8883036A2ACEC55C004FD77D /* Information */,
 				10EE52092ACEA8B100704830 /* MainView */,
 				10EE51F82ACEA8B100704830 /* SubView */,
 				10EE51F42ACEA8B100704830 /* Modifres */,
@@ -265,6 +264,7 @@
 				10EE520C2ACEA8B100704830 /* InternetPackageView.swift */,
 				10EE520D2ACEA8B100704830 /* AppSettingsView.swift */,
 				887845F92ACD461C00625703 /* Support */,
+				8883036A2ACEC55C004FD77D /* Information */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
