@@ -48,7 +48,7 @@ struct NotificationsView: View {
         .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
-                NavigationBarLeading(previousViewName: "Profile")
+                NavigationBarLeading(previousViewName: "Notification")
             }
             
             ToolbarItem(placement: .navigationBarTrailing) {
