@@ -11,7 +11,7 @@ struct ProfileView: View {
     // MARK: - Properties
     @StateObject var userInfos = UserInfos.shared
     
-        
+    @State private var isShowInformation: Bool = false
     
     // MARK: - Body
     var body: some View {
@@ -96,11 +96,32 @@ struct ProfileView: View {
                             ProfileOptionView(image: "speed.play", title: "My Wishlist")
                         }
                         
-                        NavigationLink(destination: AppSettingsView()) {
+                        // Information(Expandable)
+                        Button {
+                            withAnimation(.easeIn(duration: 0.2)) {
+                                isShowInformation.toggle()
+                            }
+                        } label: {
                             ProfileOptionView(image: "info.i", title: "Information")
                         }
                         
-                        NavigationLink(destination: AppSettingsView()) {
+                        VStack {
+                            if isShowInformation {
+                                NavigationLink(destination: AppSettingsView()) {
+                                    ProfileInformationExpandableView(title: "T&C")
+                                }
+                                
+                                NavigationLink(destination: AppSettingsView()) {
+                                    ProfileInformationExpandableView(title: "FAQ")
+                                }
+                                
+                                NavigationLink(destination: AppSettingsView()) {
+                                    ProfileInformationExpandableView(title: "Privacy Notice")
+                                }
+                            }
+                        }
+                        
+                        NavigationLink(destination: UsageHistorySupportPage()) {
                             ProfileOptionView(image: "headphone.24:7", title: "Support")
                         }
                     }

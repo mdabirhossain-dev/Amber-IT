@@ -38,6 +38,7 @@ struct EditProfileView: View {
         return countryFlag(countryName: selectedCountry)
     }
     
+    // Area Selection
     @State private var selectedCountry = "Country"
     @State private var selectedCity = "City"
     @State private var selectedArea = "Area"
@@ -55,20 +56,20 @@ struct EditProfileView: View {
     var body: some View {
         VStack {
             // Navigation Bar
-            NavigationBar(content: {
-                Button {
-                    // Dismissing from this view
-                    presentation.wrappedValue.dismiss()
-                } label: {
-                    Image("arrow-left")
-                        .resizable()
-                        .frame(width: 24, height: 24)
-                }
-
-                
-                Text("User Profile Edit")
-                    .font(.custom(FontManager.Poppins.semiBold, size: 18))
-            })
+//            NavigationBar(content: {
+//                Button {
+//                    // Dismissing from this view
+//                    presentation.wrappedValue.dismiss()
+//                } label: {
+//                    Image("arrow-left")
+//                        .resizable()
+//                        .frame(width: 24, height: 24)
+//                }
+//
+//
+//                Text("User Profile Edit")
+//                    .font(.custom(FontManager.Poppins.semiBold, size: 18))
+//            })
             
             ScrollView(.vertical, showsIndicators: false) {
                 // Profile Image
@@ -173,6 +174,7 @@ struct EditProfileView: View {
                                             ZStack {
                                                 Image(systemName: "circle.fill")
                                                     .scaleEffect(0.5)
+                                                
                                                 Image(systemName: "circle")
                                             }
                                         } else {
@@ -208,7 +210,6 @@ struct EditProfileView: View {
                                         Text(countryName[index])
                                             .frame(maxWidth: .infinity, maxHeight: .infinity)
                                     }
-
                                 }
                             } label: {
                                 Image("arrowDown")
@@ -320,6 +321,15 @@ struct EditProfileView: View {
             } // : SCROLL
         } // : VSTACK
         .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                NavigationBarLeading(previousViewName: "Profile")
+            }
+            
+            ToolbarItem(placement: .navigationBarTrailing) {
+                NavigationBarTrailing()
+            }
+        }
     }
 }
 

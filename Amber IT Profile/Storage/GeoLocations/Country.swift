@@ -39,6 +39,7 @@ func areaNames(city: String) -> [String] {
     print(city)
     let areaName = ["Dhaka" : ["Uttara","Gulshan", "Banani", "Mohakhali", "Dhanmondi","Mirpur"],
                     "Jhenaidah" : ["Shailkupa","Horinakundu","Moheshpur"],
+                    "Rajsahi" : ["Pabna","Sirajganj","Bogura","Joypurhat"],
                     "Khulna" : ["Bheramara","Imanpur","Horinarayanpur", "Khoksa"],
                     "Rangpur" : ["Mithapukur","Kaunia","Gangachara", "Rangpur Sadar", "Pirgacha", "Pirganj", "Taraganj"],
                     "Pabna" : ["Ishwordi","Ruppur","Pakshy"]]

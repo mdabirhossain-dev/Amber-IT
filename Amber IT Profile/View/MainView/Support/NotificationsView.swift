@@ -12,7 +12,6 @@ struct NotificationsView: View {
         ScrollView{
             ForEach(0..<20) { i in
                 
-                
                 ZStack{
                     HStack(alignment: .center){
                         Image("v\(i%4)")
@@ -46,7 +45,16 @@ struct NotificationsView: View {
                 }.padding(.horizontal, 5)
             }
         }
-              
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                NavigationBarLeading(previousViewName: "Profile")
+            }
+            
+            ToolbarItem(placement: .navigationBarTrailing) {
+                NavigationBarTrailing()
+            }
+        }
     }
 }
 

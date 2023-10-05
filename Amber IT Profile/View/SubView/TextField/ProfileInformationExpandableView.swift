@@ -1,24 +1,21 @@
 //
-//  ProfileOptionView.swift
+//  ProfileInformationExpandableView.swift
 //  Amber IT Profile
 //
-//  Created by Md Abir Hossain on 27/9/23.
+//  Created by Md Abir Hossain on 5/10/23.
 //
 
 import SwiftUI
 
-struct ProfileOptionView: View {
+
+struct ProfileInformationExpandableView: View {
     // MARK: - Properties
-    let image: String
     let title: String
-    
-    
+        
     // MARK: - Body
     var body: some View {
         VStack {
             HStack(spacing: 16) {
-                Image(image)
-                
                 Text(title)
                     .font(.custom(FontManager.Poppins.medium, size: 16))
                     .foregroundColor(Color.white)
@@ -36,9 +33,9 @@ struct ProfileOptionView: View {
 }
 
 // MARK: - Preview
-struct ProfileOptionView_Previews: PreviewProvider {
+struct ProfileInformationExpandableView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileOptionView(image: "setting", title: "Demo Title")
+    ProfileInformationExpandableView(title: "Demo Title")
             .preferredColorScheme(.dark)
     }
 }

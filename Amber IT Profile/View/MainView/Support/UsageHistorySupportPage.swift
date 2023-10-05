@@ -97,7 +97,18 @@ struct UsageHistorySupportPage: View {
             }
             Spacer()
             
-        }.edgesIgnoringSafeArea(.bottom)
+        }
+        .edgesIgnoringSafeArea(.bottom)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                NavigationBarLeading(previousViewName: "Profile")
+            }
+            
+            ToolbarItem(placement: .navigationBarTrailing) {
+                NavigationBarTrailing()
+            }
+        }
     }
 }
 

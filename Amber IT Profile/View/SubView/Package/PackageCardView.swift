@@ -16,61 +16,54 @@ struct PackageCardView: View {
         VStack {
 //            GeometryReader { geo in
             VStack(alignment: .center, spacing: 20) {
-                    
-//                    let deviceWidth = geo.size.width
-                    let deviceWidth = DeviceInfos().deviceWidth - 50
-                    
+                
+//               let deviceWidth = geo.size.width
+                let deviceWidth = DeviceInfos().deviceWidth - 50
+                
                 // Package Name
-                    Text(package.packageName ?? "")
-                        .font(.custom(FontManager.Poppins.medium, size: 32))
-                        .foregroundColor(Color.white)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 12)
-                        .background(
-                            LinearGradient(gradient: Gradient(colors: [Color(red: 0.92, green: 0.11, blue: 0.19), Color(red: 0.58, green: 0.05, blue: 0.05)]), startPoint: .top, endPoint: .bottom)
-                        )
-                    
-                    
-                    VStack(spacing: 20) {
-                        // Package Bandwidth
-                        Text(package.packageBndwidth ?? "")
-                            .font(.custom(FontManager.Poppins.semiBold, size: 37))
-                            .foregroundColor(Color.yellow)
-                        
-                        // Step Gradient
-                        StepGradientView()
-                            .frame(width: 84/392 * deviceWidth, height: 4/853 * DeviceInfos().deviceHeight)
+                Text(package.packageName ?? "")
+                    .font(.custom(FontManager.Poppins.medium, size: 32))
+                    .foregroundColor(Color.white)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 12)
+                    .background(
+                        LinearGradient(gradient: Gradient(colors: [Color(red: 0.92, green: 0.11, blue: 0.19), Color(red: 0.58, green: 0.05, blue: 0.05)]), startPoint: .top, endPoint: .bottom)
+                    )
+                
+                // Package Bandwidth
+                Text(package.packageBndwidth ?? "")
+                    .font(.custom(FontManager.Poppins.semiBold, size: 37))
+                    .foregroundColor(Color.yellow)
+                
+                // Step Gradient
+                StepGradientView()
+                    .frame(width: 84/392 * deviceWidth, height: 4/853 * DeviceInfos().deviceHeight)
+                
+                VStack(alignment: .leading, spacing: 23) {
+                    // Used Talktime
+                    if !(package.useTime?.isEmpty ?? true) {
+                        Text("• 24 Hours Unlimited")
                     }
                     
-                    
-                    VStack(alignment: .leading) {
-                        // Used Talktime
-                        if !(package.useTime?.isEmpty ?? true) {
-                            Text("• 24 Hours Unlimited")
-                                .foregroundColor(Color.white)
-                        }
-                        
-                        // Connection type
-                        if !(package.connectionType?.isEmpty ?? true) {
-                            Text("• \(package.connectionType ?? "")")
-                                .foregroundColor(Color.white)
-                        }
-                        
-                        // Free Talktime
-                        Text("• Talk time - \(package.talkTime ?? "N/A")")
-                            .foregroundColor(Color.white)
-                        
-                        // OTC Charge
-                        Text("• OTC Free - \(package.otcCharge ?? .zero, specifier: "%.2f") Taka")
-                            .foregroundColor(Color.white)
-                        
-                        // Customer Support Type
-                        if package.isCustomerService ?? false {
-                            Text("• 24/7 Customer Care")
-                                .foregroundColor(Color.white)
-                        }
+                    // Connection type
+                    if !(package.connectionType?.isEmpty ?? true) {
+                        Text("• \(package.connectionType ?? "")")
                     }
-                    .font(.custom(FontManager.Poppins.medium, size: 18))
+                    
+                    // Free Talktime
+                    Text("• Talk time - \(package.talkTime ?? "N/A")")
+                    
+                    // OTC Charge
+                    Text("• OTC Free - \(package.otcCharge ?? .zero, specifier: "%.2f") Taka")
+                    
+                    // Customer Support Type
+                    if package.isCustomerService ?? false {
+                        Text("• 24/7 Customer Care")
+                    }
+                }
+                .font(.custom(FontManager.Poppins.regular, size: 18))
+                .foregroundColor(Color.white)
+                .padding(.bottom, 20)
                 
                 // Monthly Bill
                 Text("৳ \(package.monthlyBill ?? 0.0, specifier: "%.2f")")
@@ -110,7 +103,7 @@ struct PackageCardView: View {
             )
             .cornerRadius(5)
             .overlay(
-                RoundedRectangle(cornerRadius: 5)
+                RoundedRectangle(cornerRadius: 16)
                     .stroke(
                         LinearGradient(
                             colors: [Color(red: 0.92, green: 0.11, blue: 0.19), .white],
@@ -118,7 +111,7 @@ struct PackageCardView: View {
                             endPoint: .bottom)
                         , lineWidth: 2)
             )
-            .cornerRadius(5)
+            .cornerRadius(16)
             
 //          }
         }

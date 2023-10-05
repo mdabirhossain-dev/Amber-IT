@@ -145,7 +145,6 @@ struct AppSettingsView: View {
                             .cornerRadius(39)
                         }
                     }
-                    
                 }
                 .padding(.top, 45)
                 Spacer()

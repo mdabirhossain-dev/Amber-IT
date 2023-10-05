@@ -66,22 +66,21 @@ struct InternetPackageView: View {
 //            .padding(.horizontal, 15)
             
             ScrollView(.vertical, showsIndicators: false) {
-                VStack(spacing: 25) {
-                    
-                    VStack(spacing: 12) {
-                        if planSelectionIndex == 0 {
-                            PackageListView()
-                                .padding(.horizontal, 25)
-                        } else if planSelectionIndex == 1 {
-                            PaymentHistoryListView()
-                        } else {
-                            EmptyView()
-                        }
+                VStack(spacing: 12) {
+                    if planSelectionIndex == 0 {
+//                            PackageListView()
+//                                .padding(.horizontal, 25)
+                        PackageRegistrationFormView()
+                            .padding(.horizontal, 15)
+                    } else if planSelectionIndex == 1 {
+                        PaymentHistoryListView()
+                    } else {
+                        EmptyView()
                     }
-                    
-                    
-                    Spacer()
                 }
+                
+                
+                Spacer()
             }
         }
         .navigationBarBackButtonHidden(true)
