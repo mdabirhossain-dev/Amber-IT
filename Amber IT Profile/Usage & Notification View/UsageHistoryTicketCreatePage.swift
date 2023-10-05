@@ -33,8 +33,9 @@ struct UsageHistoryTicketCreatePage: View {
                     VStack {
                         Text("Enter Max 250 Charecter")
                             .padding(.top, 10)
-                            .padding(.leading, 27)
-                            .opacity(0.7)
+                            .padding(.leading, 30)
+                            .font(.custom(FontManager.Poppins.medium, size: 12))
+                            .opacity(0.8)
                         Spacer()
                     }
                 }
@@ -62,7 +63,8 @@ struct UsageHistoryTicketCreatePage: View {
             Spacer()
             }.padding(.horizontal)
                 .padding(.vertical, 10)
-                        Button{
+            
+            Button{
                 
             }label: {
                 RoundedRectangle(cornerRadius: 15)

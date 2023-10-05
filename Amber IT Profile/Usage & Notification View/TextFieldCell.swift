@@ -26,6 +26,7 @@ struct UseageHistoryTextFieldDesignModifier: ViewModifier {
     var RectangeHeight: CGFloat
     func body(content: Content) -> some View {
         content
+            .font(.custom(FontManager.Poppins.medium, size: 12))
             .padding(.horizontal, 10)
             .background(
                 RoundedRectangle(cornerRadius: 10)
