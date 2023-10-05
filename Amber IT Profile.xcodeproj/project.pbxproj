@@ -64,6 +64,9 @@
 		88283D512ACE892E000E73B2 /* UsageHistorySupportPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88283D502ACE892E000E73B2 /* UsageHistorySupportPage.swift */; };
 		887845FB2ACD465100625703 /* UsageHistoryTextFieldModifierl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887845FA2ACD465100625703 /* UsageHistoryTextFieldModifierl.swift */; };
 		887845FD2ACD4D1D00625703 /* UsageHistoryTicketCreatePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887845FC2ACD4D1D00625703 /* UsageHistoryTicketCreatePage.swift */; };
+		8883036C2ACEC57D004FD77D /* Terms_And_Conditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8883036B2ACEC57D004FD77D /* Terms_And_Conditions.swift */; };
+		8883036E2ACECAB0004FD77D /* FAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8883036D2ACECAB0004FD77D /* FAQ.swift */; };
+		888303702ACECB19004FD77D /* Privacy Notice .swift in Sources */ = {isa = PBXBuildFile; fileRef = 8883036F2ACECB19004FD77D /* Privacy Notice .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +129,9 @@
 		88283D502ACE892E000E73B2 /* UsageHistorySupportPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageHistorySupportPage.swift; sourceTree = "<group>"; };
 		887845FA2ACD465100625703 /* UsageHistoryTextFieldModifierl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageHistoryTextFieldModifierl.swift; sourceTree = "<group>"; };
 		887845FC2ACD4D1D00625703 /* UsageHistoryTicketCreatePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageHistoryTicketCreatePage.swift; sourceTree = "<group>"; };
+		8883036B2ACEC57D004FD77D /* Terms_And_Conditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Terms_And_Conditions.swift; sourceTree = "<group>"; };
+		8883036D2ACECAB0004FD77D /* FAQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQ.swift; sourceTree = "<group>"; };
+		8883036F2ACECB19004FD77D /* Privacy Notice .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Privacy Notice .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +191,7 @@
 		10EE51F32ACEA8B100704830 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8883036A2ACEC55C004FD77D /* Information */,
 				10EE52092ACEA8B100704830 /* MainView */,
 				10EE51F82ACEA8B100704830 /* SubView */,
 				10EE51F42ACEA8B100704830 /* Modifres */,
@@ -380,6 +387,16 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		8883036A2ACEC55C004FD77D /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				8883036B2ACEC57D004FD77D /* Terms_And_Conditions.swift */,
+				8883036D2ACECAB0004FD77D /* FAQ.swift */,
+				8883036F2ACECB19004FD77D /* Privacy Notice .swift */,
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -475,6 +492,7 @@
 				10EE524D2ACEA92200704830 /* DateFormatter.swift in Sources */,
 				10EE52152ACEA8B100704830 /* ProfileTextFiledView.swift in Sources */,
 				10EE52212ACEA8B100704830 /* AppSettingsView.swift in Sources */,
+				8883036C2ACEC57D004FD77D /* Terms_And_Conditions.swift in Sources */,
 				10EE522E2ACEA8D400704830 /* Package.swift in Sources */,
 				10EE522C2ACEA8D400704830 /* UserGender.swift in Sources */,
 				10EE522B2ACEA8D400704830 /* UserData.swift in Sources */,
@@ -502,8 +520,10 @@
 				10EE52332ACEA8FA00704830 /* PackageViewModel.swift in Sources */,
 				10EE52202ACEA8B100704830 /* InternetPackageView.swift in Sources */,
 				10EE52292ACEA8D400704830 /* UserLocation.swift in Sources */,
+				8883036E2ACECAB0004FD77D /* FAQ.swift in Sources */,
 				887845FB2ACD465100625703 /* UsageHistoryTextFieldModifierl.swift in Sources */,
 				10EE520F2ACEA8B100704830 /* TextFieldStyle.swift in Sources */,
+				888303702ACECB19004FD77D /* Privacy Notice .swift in Sources */,
 				108C6AF82AC3F77F006CC7CC /* Amber_IT_ProfileApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
