@@ -11,14 +11,15 @@ struct UsageHistoryAllTickets: View {
     @State private var isPendinig: Bool = true
     var body: some View {
         ScrollView {
-            ForEach(0..<15) { _ in
+            ForEach(0..<15) { i in
                 RoundedRectangle(cornerRadius: 10)
                     .frame(height: 99.11905)
                     .foregroundColor(.white)
                     .overlay (
                         VStack(alignment: .leading){
                             HStack(alignment: .top){
-                                if !isPendinig {
+//                                if !isPendinig {
+                                if i % 3 == 0 {
                                     ZStack(alignment: .center){
                                         RoundedRectangle(cornerRadius: 10)
                                             .foregroundColor(.white)
@@ -52,14 +53,16 @@ struct UsageHistoryAllTickets: View {
                                         Text("October 05, 2023 | 5.00 PM")
                                             .foregroundColor(.gray.opacity(0.5))
                                             .font(.custom(FontManager.Poppins.medium, size: 12))
-                                    }
+                                    }.lineLimit(1)
+                                        .minimumScaleFactor(0.5)
                                     Text("Content Buffering")
                                         .foregroundColor(.gray.opacity(0.5))
                                         .font(.custom(FontManager.Poppins.medium, size: 12))
                                     
                                 }
                                 Spacer()
-                                if !isPendinig {
+//                                if !isPendinig {
+                                if i % 3 == 0 {
                                     Text("Pending")
                                         .font(.custom(FontManager.Poppins.medium, size: 11))
                                         .foregroundColor(.black)
@@ -84,8 +87,10 @@ struct UsageHistoryAllTickets: View {
                                 Text("October 05, 2023 | 5.00 PM")
                                     .foregroundColor(.gray.opacity(0.5))
                                     .font(.custom(FontManager.Poppins.medium, size: 12))
-                                Spacer()
-                            }
+                                Spacer(minLength: 5)
+                            }.lineLimit(1)
+                                .minimumScaleFactor(0.5)
+
                         }.padding(5)
                     )
                     .padding(.horizontal, 10)
