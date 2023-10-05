@@ -50,6 +50,12 @@
 		10D1B4AD2ACA9560009A02A8 /* GeoLocations.json in Resources */ = {isa = PBXBuildFile; fileRef = 10D1B4AC2ACA9560009A02A8 /* GeoLocations.json */; };
 		10D1B4AF2ACA9B91009A02A8 /* BundleJsonDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D1B4AE2ACA9B91009A02A8 /* BundleJsonDecoder.swift */; };
 		10D1B4B12ACAA502009A02A8 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D1B4B02ACAA502009A02A8 /* Country.swift */; };
+		881100E22ACD74EC008536BE /* UsageHistoryAllTickets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881100E12ACD74EC008536BE /* UsageHistoryAllTickets.swift */; };
+		881100E42ACD7DEA008536BE /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881100E32ACD7DEA008536BE /* NotificationsView.swift */; };
+		881100E62ACD84AC008536BE /* FeedBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881100E52ACD84AC008536BE /* FeedBackView.swift */; };
+		88283D512ACE892E000E73B2 /* UsageHistorySupportPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88283D502ACE892E000E73B2 /* UsageHistorySupportPage.swift */; };
+		887845FB2ACD465100625703 /* UsageHistoryTextFieldModifierl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887845FA2ACD465100625703 /* UsageHistoryTextFieldModifierl.swift */; };
+		887845FD2ACD4D1D00625703 /* UsageHistoryTicketCreatePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887845FC2ACD4D1D00625703 /* UsageHistoryTicketCreatePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +104,12 @@
 		10D1B4AC2ACA9560009A02A8 /* GeoLocations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GeoLocations.json; sourceTree = "<group>"; };
 		10D1B4AE2ACA9B91009A02A8 /* BundleJsonDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleJsonDecoder.swift; sourceTree = "<group>"; };
 		10D1B4B02ACAA502009A02A8 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		881100E12ACD74EC008536BE /* UsageHistoryAllTickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageHistoryAllTickets.swift; sourceTree = "<group>"; };
+		881100E32ACD7DEA008536BE /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		881100E52ACD84AC008536BE /* FeedBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackView.swift; sourceTree = "<group>"; };
+		88283D502ACE892E000E73B2 /* UsageHistorySupportPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageHistorySupportPage.swift; sourceTree = "<group>"; };
+		887845FA2ACD465100625703 /* UsageHistoryTextFieldModifierl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageHistoryTextFieldModifierl.swift; sourceTree = "<group>"; };
+		887845FC2ACD4D1D00625703 /* UsageHistoryTicketCreatePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageHistoryTicketCreatePage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +204,7 @@
 		108C6AF62AC3F77F006CC7CC /* Amber IT Profile */ = {
 			isa = PBXGroup;
 			children = (
+				887845F92ACD461C00625703 /* Usage & Notification View */,
 				108C6B102AC41465006CC7CC /* Amber-IT-Profile-Info.plist */,
 				108C6B052AC413B1006CC7CC /* View */,
 				10732F682ACC183F00DD20E6 /* Shapes */,
@@ -322,6 +335,19 @@
 			path = GeoLocations;
 			sourceTree = "<group>";
 		};
+		887845F92ACD461C00625703 /* Usage & Notification View */ = {
+			isa = PBXGroup;
+			children = (
+				88283D502ACE892E000E73B2 /* UsageHistorySupportPage.swift */,
+				887845FA2ACD465100625703 /* UsageHistoryTextFieldModifierl.swift */,
+				887845FC2ACD4D1D00625703 /* UsageHistoryTicketCreatePage.swift */,
+				881100E12ACD74EC008536BE /* UsageHistoryAllTickets.swift */,
+				881100E52ACD84AC008536BE /* FeedBackView.swift */,
+				881100E32ACD7DEA008536BE /* NotificationsView.swift */,
+			);
+			path = "Usage & Notification View";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -414,6 +440,7 @@
 				10D1B4B12ACAA502009A02A8 /* Country.swift in Sources */,
 				108C6B222AC43E13006CC7CC /* ProfileOptionView.swift in Sources */,
 				108C6B132AC4151B006CC7CC /* Colors.swift in Sources */,
+				88283D512ACE892E000E73B2 /* UsageHistorySupportPage.swift in Sources */,
 				10732F672ACC176100DD20E6 /* PackageCardView.swift in Sources */,
 				10609B132AC974C700BC556A /* DateFormatter.swift in Sources */,
 				10732F642ACC0F8A00DD20E6 /* InternetPackageView.swift in Sources */,
@@ -423,12 +450,17 @@
 				108C6B152AC4154C006CC7CC /* ProfileView.swift in Sources */,
 				10609B112AC963A600BC556A /* CalenderView.swift in Sources */,
 				10609B022AC93F1500BC556A /* DeviceInfos.swift in Sources */,
+				881100E62ACD84AC008536BE /* FeedBackView.swift in Sources */,
 				108C6B082AC4140F006CC7CC /* FontManager.swift in Sources */,
+				881100E42ACD7DEA008536BE /* NotificationsView.swift in Sources */,
+				887845FD2ACD4D1D00625703 /* UsageHistoryTicketCreatePage.swift in Sources */,
 				10732F5B2ACBD17B00DD20E6 /* UserData.swift in Sources */,
+				881100E22ACD74EC008536BE /* UsageHistoryAllTickets.swift in Sources */,
 				10732F762ACC340100DD20E6 /* PaymentHistory.swift in Sources */,
 				10D1B4AA2ACA8ACD009A02A8 /* UserLocation.swift in Sources */,
 				10609B082AC94C6000BC556A /* ProfileTextFiledView.swift in Sources */,
 				108C6B202AC42AB7006CC7CC /* ScreenSize.swift in Sources */,
+				887845FB2ACD465100625703 /* UsageHistoryTextFieldModifierl.swift in Sources */,
 				10732F6C2ACC187000DD20E6 /* Package.swift in Sources */,
 				108C6AF82AC3F77F006CC7CC /* Amber_IT_ProfileApp.swift in Sources */,
 				10732F6A2ACC183F00DD20E6 /* StepGradientView.swift in Sources */,
@@ -561,7 +593,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Amber IT Profile/Preview Content\"";
-				DEVELOPMENT_TEAM = 767JC457LD;
+				DEVELOPMENT_TEAM = 65M4MWT22C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Amber-IT-Profile-Info.plist";
@@ -576,7 +608,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mdabirhossain.Amber-IT-Profile";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mdabirhossain.Amber-IT-Profile1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -592,7 +624,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Amber IT Profile/Preview Content\"";
-				DEVELOPMENT_TEAM = 767JC457LD;
+				DEVELOPMENT_TEAM = 65M4MWT22C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Amber-IT-Profile-Info.plist";
@@ -607,7 +639,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mdabirhossain.Amber-IT-Profile";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mdabirhossain.Amber-IT-Profile1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

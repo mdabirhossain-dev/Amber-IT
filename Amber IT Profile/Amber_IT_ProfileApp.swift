@@ -12,7 +12,7 @@ struct Amber_IT_ProfileApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                ProfileView()
+                UsageHistorySupportPage()
             }
             .preferredColorScheme(.dark)
         }
