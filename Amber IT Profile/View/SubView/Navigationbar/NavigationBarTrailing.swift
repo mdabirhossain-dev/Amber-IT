@@ -10,7 +10,7 @@ import SwiftUI
 struct NavigationBarTrailing: View {
     // MARK: - Properties
     
-    
+    @Binding var gotoNotificationView: Bool
     // MARK: - Body
     var body: some View {
         HStack(spacing: 21) {
@@ -28,7 +28,9 @@ struct NavigationBarTrailing: View {
             }
             
             // Navigate to Notification View
-            NavigationLink(destination: NotificationsView()) {
+            Button{
+                gotoNotificationView = true
+            }label: {
                 Image("bell")
                     .frame(width: 20.64, height: 22.97)
             }
@@ -43,6 +45,6 @@ struct NavigationBarTrailing: View {
 // MARK: - Properties
 struct NavigationBarTrailing_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationBarTrailing()
+        NavigationBarTrailing(gotoNotificationView: .constant(false))
     }
 }

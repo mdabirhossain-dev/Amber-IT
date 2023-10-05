@@ -12,14 +12,14 @@ struct ProfileView: View {
     @StateObject var userInfos = UserInfos.shared
     
     @State private var isShowInformation: Bool = false
-    
+    @State private var gotoNotificationView: Bool = false
     // MARK: - Body
     var body: some View {
         VStack {
             NavigationBar(content: {
                 Image("amberLogo")
                     .frame(width: 21, height: 33)
-            })
+            }, gotoNotificationView: $gotoNotificationView)
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {
@@ -87,7 +87,10 @@ struct ProfileView: View {
                         NavigationLink(destination: InternetPackageView()) {
                             ProfileOptionView(image: "crown", title: "Internet Packages")
                         }
-                        
+                        NavigationLink(destination: NotificationsView(), isActive: $gotoNotificationView) {
+                            EmptyView()
+                        }
+
                         NavigationLink(destination: AppSettingsView()) {
                             ProfileOptionView(image: "setting", title: "App Setting")
                         }

@@ -11,6 +11,7 @@ struct UsageHistorySupportPage: View {
     @State private var ticketCreate: Bool = true
     @State private var allTicket: Bool = false
     @State private var feedback: Bool = false
+    @State private var gotoNotificationView: Bool = false
     var body: some View {
         VStack{
             RoundedRectangle(cornerRadius: 10)
@@ -83,6 +84,9 @@ struct UsageHistorySupportPage: View {
                     }.padding(.horizontal, 15)
                 )
             ZStack {
+                NavigationLink(destination: NotificationsView(), isActive: $gotoNotificationView) {
+                    EmptyView()
+                }
                 if ticketCreate {
                     UsageHistoryTicketCreatePage()
                 }
@@ -106,7 +110,7 @@ struct UsageHistorySupportPage: View {
             }
             
             ToolbarItem(placement: .navigationBarTrailing) {
-                NavigationBarTrailing()
+                NavigationBarTrailing(gotoNotificationView: $gotoNotificationView)
             }
         }
     }

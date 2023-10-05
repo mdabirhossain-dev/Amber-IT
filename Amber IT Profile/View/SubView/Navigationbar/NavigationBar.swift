@@ -11,9 +11,10 @@ struct NavigationBar<Content: View>: View {
     // MARK: - Properties
     
     let content: Content
-    
-    init(@ViewBuilder content: () -> Content) {
+    @Binding var gotoNotificationView: Bool
+    init(@ViewBuilder content: () -> Content, gotoNotificationView: Binding<Bool>) {
             self.content = content()
+            self._gotoNotificationView = gotoNotificationView
         }
     
     @Environment(\.presentationMode) var presentation
@@ -41,7 +42,7 @@ struct NavigationBar<Content: View>: View {
             }
             
             Button {
-                presentation.wrappedValue.dismiss()
+                gotoNotificationView = true
             } label: {
                 Image("bell")
                     .frame(width: 20.64, height: 22.97)
@@ -59,6 +60,6 @@ struct NavigationBar_Previews: PreviewProvider {
     static var previews: some View {
         NavigationBar(content: {
             Text("Hello Nav")
-        })
+        }, gotoNotificationView: .constant(false))
     }
 }

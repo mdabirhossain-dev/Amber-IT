@@ -52,7 +52,7 @@ struct NotificationsView: View {
             }
             
             ToolbarItem(placement: .navigationBarTrailing) {
-                NavigationBarTrailing()
+                NavigationBarTrailing(gotoNotificationView: .constant(false))
             }
         }
     }
