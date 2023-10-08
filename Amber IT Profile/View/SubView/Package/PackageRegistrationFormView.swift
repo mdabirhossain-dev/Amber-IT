@@ -97,13 +97,12 @@ struct PackageRegistrationFormView: View {
                                 
                                 RoundedCorners(topLeft: 5, bottomRight: 5)
                                     .foregroundColor(Color.white)
-//                                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
-                                     .frame(width: 23/392 * DeviceInfos().deviceWidth, height: 23/392 * DeviceInfos().deviceWidth)
-                                            .overlay(
-                                                Image("arrowDownTriangleBlack")
-                                                    .resizable()
-                                                    .frame(width: 12/392 * DeviceInfos().deviceWidth, height: 9/852 * DeviceInfos().deviceHeight)
-                                            )
+                                    .frame(width: 23/852 * DeviceInfos().deviceHeight, height: 23/852 * DeviceInfos().deviceHeight)
+                                    .overlay (
+                                        Image("arrowDownTriangleBlack")
+                                            .resizable()
+                                            .frame(width: 12/392 * DeviceInfos().deviceWidth, height: 9/852 * DeviceInfos().deviceHeight)
+                                    )
                             }
                             .frame(maxWidth: .infinity)
                             .frame(height: 23/852 * DeviceInfos().deviceHeight)
@@ -142,13 +141,12 @@ struct PackageRegistrationFormView: View {
                                     
                                     RoundedCorners(topLeft: 5, bottomRight: 5)
                                         .foregroundColor(Color.white)
-    //                                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
-                                         .frame(width: 23/392 * DeviceInfos().deviceWidth, height: 23/392 * DeviceInfos().deviceWidth)
-                                                .overlay(
-                                                    Image("arrowDownTriangleBlack")
-                                                        .resizable()
-                                                        .frame(width: 12/392 * DeviceInfos().deviceWidth, height: 9/852 * DeviceInfos().deviceHeight)
-                                                )
+                                        .frame(width: 23/852 * DeviceInfos().deviceHeight, height: 23/852 * DeviceInfos().deviceHeight)
+                                        .overlay (
+                                            Image("arrowDownTriangleBlack")
+                                                .resizable()
+                                                .frame(width: 12/392 * DeviceInfos().deviceWidth, height: 9/852 * DeviceInfos().deviceHeight)
+                                        )
                                 }
                                 .frame(maxWidth: .infinity)
                                 .frame(height: 23/852 * DeviceInfos().deviceHeight)
@@ -158,7 +156,7 @@ struct PackageRegistrationFormView: View {
                                         .frame(height: 23/852 * DeviceInfos().deviceHeight)
                                 )
                             }
-                        }
+                        }.disabled(selectedDistrict.isEmpty)
                         
                         // Package
                         Menu {
@@ -184,13 +182,12 @@ struct PackageRegistrationFormView: View {
                                     
                                     RoundedCorners(topLeft: 5, bottomRight: 5)
                                         .foregroundColor(Color.white)
-    //                                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
-                                         .frame(width: 23/392 * DeviceInfos().deviceWidth, height: 23/392 * DeviceInfos().deviceWidth)
-                                                .overlay(
-                                                    Image("arrowDownTriangleBlack")
-                                                        .resizable()
-                                                        .frame(width: 12/392 * DeviceInfos().deviceWidth, height: 9/852 * DeviceInfos().deviceHeight)
-                                                )
+                                        .frame(width: 23/852 * DeviceInfos().deviceHeight, height: 23/852 * DeviceInfos().deviceHeight)
+                                        .overlay (
+                                            Image("arrowDownTriangleBlack")
+                                                .resizable()
+                                                .frame(width: 12/392 * DeviceInfos().deviceWidth, height: 9/852 * DeviceInfos().deviceHeight)
+                                        )
                                 }
                                 .frame(maxWidth: .infinity)
                                 .frame(height: 23/852 * DeviceInfos().deviceHeight)
@@ -204,7 +201,15 @@ struct PackageRegistrationFormView: View {
                     }
                     
                     // Address
-                    TextFieldRoundedBorderWithTitle(title: "Address", textFieldPlaceholder: "Enter your Address", textField: $address, fieldHeight: 40)
+//                    TextFieldRoundedBorderWithTitle(title: "Address", textFieldPlaceholder: "Enter your Address", textField: $address, fieldHeight: 40)
+                    
+                    VStack(alignment: .leading, spacing: 9){
+                        TextFieldTitle(text: "Address")
+                        GeometryReader { geo in
+                            TextField("Address", text: $address)
+                                .textFieldRoundedBorder(rectangeHeight: 23/852 * DeviceInfos().deviceHeight)
+                        }
+                    }
                 }
                 
                 // Package Input

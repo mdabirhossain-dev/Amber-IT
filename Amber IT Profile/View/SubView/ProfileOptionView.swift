@@ -11,6 +11,7 @@ struct ProfileOptionView: View {
     // MARK: - Properties
     let image: String
     let title: String
+    @Binding var arrowRotation: Bool
     
     
     // MARK: - Body
@@ -28,6 +29,7 @@ struct ProfileOptionView: View {
                 Image("chevron.right")
                     .resizable()
                     .frame(width: 18, height: 18)
+                    .rotationEffect(.degrees(arrowRotation ? 90 : 0))
             }
             
             Divider()
@@ -38,7 +40,7 @@ struct ProfileOptionView: View {
 // MARK: - Preview
 struct ProfileOptionView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileOptionView(image: "setting", title: "Demo Title")
+        ProfileOptionView(image: "setting", title: "Demo Title", arrowRotation: .constant(false))
             .preferredColorScheme(.dark)
     }
 }

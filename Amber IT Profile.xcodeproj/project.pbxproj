@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		107AB8672AD26876005EA82C /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107AB8642AD26876005EA82C /* ImagePickerView.swift */; };
+		107AB8682AD26876005EA82C /* ProfilePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107AB8652AD26876005EA82C /* ProfilePictureView.swift */; };
+		107AB8692AD26876005EA82C /* ZoomableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107AB8662AD26876005EA82C /* ZoomableScrollView.swift */; };
+		107AB86D2AD26B31005EA82C /* ImgPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107AB86C2AD26B31005EA82C /* ImgPicker.swift */; };
+		107AB86F2AD26B6C005EA82C /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107AB86E2AD26B6C005EA82C /* ProfilePicture.swift */; };
+		107AB8732AD280A6005EA82C /* MyWishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107AB8722AD280A6005EA82C /* MyWishlistView.swift */; };
+		107AB8752AD281A7005EA82C /* MyWishList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107AB8742AD281A7005EA82C /* MyWishList.swift */; };
+		107AB8782AD28356005EA82C /* MyWatchlistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107AB8772AD28356005EA82C /* MyWatchlistItemView.swift */; };
+		107AB87A2AD28589005EA82C /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107AB8792AD28589005EA82C /* ProgressView.swift */; };
 		108C6AF82AC3F77F006CC7CC /* Amber_IT_ProfileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108C6AF72AC3F77F006CC7CC /* Amber_IT_ProfileApp.swift */; };
 		108C6AFA2AC3F77F006CC7CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108C6AF92AC3F77F006CC7CC /* ContentView.swift */; };
 		108C6AFC2AC3F781006CC7CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 108C6AFB2AC3F781006CC7CC /* Assets.xcassets */; };
@@ -71,6 +80,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		107AB8642AD26876005EA82C /* ImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		107AB8652AD26876005EA82C /* ProfilePictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePictureView.swift; sourceTree = "<group>"; };
+		107AB8662AD26876005EA82C /* ZoomableScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomableScrollView.swift; sourceTree = "<group>"; };
+		107AB86C2AD26B31005EA82C /* ImgPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgPicker.swift; sourceTree = "<group>"; };
+		107AB86E2AD26B6C005EA82C /* ProfilePicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
+		107AB8722AD280A6005EA82C /* MyWishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWishlistView.swift; sourceTree = "<group>"; };
+		107AB8742AD281A7005EA82C /* MyWishList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWishList.swift; sourceTree = "<group>"; };
+		107AB8772AD28356005EA82C /* MyWatchlistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWatchlistItemView.swift; sourceTree = "<group>"; };
+		107AB8792AD28589005EA82C /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		108C6AF42AC3F77F006CC7CC /* Amber IT Profile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Amber IT Profile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		108C6AF72AC3F77F006CC7CC /* Amber_IT_ProfileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amber_IT_ProfileApp.swift; sourceTree = "<group>"; };
 		108C6AF92AC3F77F006CC7CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -147,6 +165,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		107AB8632AD26876005EA82C /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				107AB8642AD26876005EA82C /* ImagePickerView.swift */,
+				107AB8652AD26876005EA82C /* ProfilePictureView.swift */,
+				107AB8662AD26876005EA82C /* ZoomableScrollView.swift */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		107AB8762AD28307005EA82C /* MyWatchlist */ = {
+			isa = PBXGroup;
+			children = (
+				107AB8772AD28356005EA82C /* MyWatchlistItemView.swift */,
+				107AB8792AD28589005EA82C /* ProgressView.swift */,
+			);
+			path = MyWatchlist;
+			sourceTree = "<group>";
+		};
 		108C6AEB2AC3F77F006CC7CC = {
 			isa = PBXGroup;
 			children = (
@@ -214,8 +251,10 @@
 		10EE51F82ACEA8B100704830 /* SubView */ = {
 			isa = PBXGroup;
 			children = (
+				107AB8632AD26876005EA82C /* EditProfile */,
 				10EE52032ACEA8B100704830 /* Package */,
 				10EE51FC2ACEA8B100704830 /* TextField */,
+				107AB8762AD28307005EA82C /* MyWatchlist */,
 				10EE51FF2ACEA8B100704830 /* Navigationbar */,
 				10EE51F92ACEA8B100704830 /* ProfileOptionView.swift */,
 				10EE51FA2ACEA8B100704830 /* PackageDataInputView.swift */,
@@ -262,9 +301,10 @@
 				10EE520B2ACEA8B100704830 /* ProfileView.swift */,
 				10EE520A2ACEA8B100704830 /* EditProfileView.swift */,
 				10EE520C2ACEA8B100704830 /* InternetPackageView.swift */,
+				107AB8722AD280A6005EA82C /* MyWishlistView.swift */,
 				10EE520D2ACEA8B100704830 /* AppSettingsView.swift */,
-				887845F92ACD461C00625703 /* Support */,
 				8883036A2ACEC55C004FD77D /* Information */,
+				887845F92ACD461C00625703 /* Support */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -277,7 +317,9 @@
 				10EE52252ACEA8D400704830 /* UserData.swift */,
 				10EE52262ACEA8D400704830 /* UserGender.swift */,
 				10EE52272ACEA8D400704830 /* PaymentHistory.swift */,
+				107AB86C2AD26B31005EA82C /* ImgPicker.swift */,
 				10EE52282ACEA8D400704830 /* Package.swift */,
+				107AB8742AD281A7005EA82C /* MyWishList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -286,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				10EE52302ACEA8FA00704830 /* UserInfos.swift */,
+				107AB86E2AD26B6C005EA82C /* ProfilePicture.swift */,
 				10EE52312ACEA8FA00704830 /* PackageViewModel.swift */,
 			);
 			path = ViewModel;
@@ -494,12 +537,15 @@
 				10EE52612ACEAA4A00704830 /* RoundedCorner.swift in Sources */,
 				10EE524D2ACEA92200704830 /* DateFormatter.swift in Sources */,
 				10EE52642ACEC4ED00704830 /* PackageFormSubmissionPopUpView.swift in Sources */,
+				107AB8682AD26876005EA82C /* ProfilePictureView.swift in Sources */,
 				10EE52152ACEA8B100704830 /* ProfileTextFiledView.swift in Sources */,
+				107AB8672AD26876005EA82C /* ImagePickerView.swift in Sources */,
 				10EE52212ACEA8B100704830 /* AppSettingsView.swift in Sources */,
 				8883036C2ACEC57D004FD77D /* Terms_And_Conditions.swift in Sources */,
 				10EE522E2ACEA8D400704830 /* Package.swift in Sources */,
 				10EE522C2ACEA8D400704830 /* UserGender.swift in Sources */,
 				10EE522B2ACEA8D400704830 /* UserData.swift in Sources */,
+				107AB8692AD26876005EA82C /* ZoomableScrollView.swift in Sources */,
 				10EE52112ACEA8B100704830 /* ProfileOptionView.swift in Sources */,
 				881100E62ACD84AC008536BE /* FeedBackView.swift in Sources */,
 				10EE52122ACEA8B100704830 /* PackageDataInputView.swift in Sources */,
@@ -508,6 +554,7 @@
 				10EE52192ACEA8B100704830 /* PaymentHistoryListItemView.swift in Sources */,
 				10EE52162ACEA8B100704830 /* NavigationBar.swift in Sources */,
 				10EE520E2ACEA8B100704830 /* TextFieldWhiteBorderedView.swift in Sources */,
+				107AB87A2AD28589005EA82C /* ProgressView.swift in Sources */,
 				10EE52512ACEA92300704830 /* Colors.swift in Sources */,
 				10EE521B2ACEA8B100704830 /* PackageRegistrationFormView.swift in Sources */,
 				10EE524E2ACEA92200704830 /* BundleJsonDecoder.swift in Sources */,
@@ -519,7 +566,9 @@
 				10EE52502ACEA92300704830 /* DeviceType.swift in Sources */,
 				10EE52142ACEA8B100704830 /* ProfileInformationExpandableView.swift in Sources */,
 				10EE521C2ACEA8B100704830 /* PackageListView.swift in Sources */,
+				107AB8782AD28356005EA82C /* MyWatchlistItemView.swift in Sources */,
 				10EE52322ACEA8FA00704830 /* UserInfos.swift in Sources */,
+				107AB86D2AD26B31005EA82C /* ImgPicker.swift in Sources */,
 				10EE52182ACEA8B100704830 /* NavigationBarLeading.swift in Sources */,
 				10EE52332ACEA8FA00704830 /* PackageViewModel.swift in Sources */,
 				10EE52202ACEA8B100704830 /* InternetPackageView.swift in Sources */,
@@ -527,8 +576,11 @@
 				8883036E2ACECAB0004FD77D /* FAQ.swift in Sources */,
 				887845FB2ACD465100625703 /* UsageHistoryTextFieldModifierl.swift in Sources */,
 				10EE520F2ACEA8B100704830 /* TextFieldStyle.swift in Sources */,
+				107AB86F2AD26B6C005EA82C /* ProfilePicture.swift in Sources */,
+				107AB8752AD281A7005EA82C /* MyWishList.swift in Sources */,
 				888303702ACECB19004FD77D /* Privacy Notice .swift in Sources */,
 				108C6AF82AC3F77F006CC7CC /* Amber_IT_ProfileApp.swift in Sources */,
+				107AB8732AD280A6005EA82C /* MyWishlistView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,6 +713,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Amber-IT-Profile-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera access permission to take photo. ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -692,6 +745,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Amber-IT-Profile-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera access permission to take photo. ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

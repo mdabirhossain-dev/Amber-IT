@@ -14,6 +14,12 @@ struct UsageHistorySupportPage: View {
     @State private var gotoNotificationView: Bool = false
     var body: some View {
         VStack{
+            // NavigationBar
+            NavigationBar(content: {
+                Image("amberLogo")
+                    .frame(width: 21, height: 33)
+            })
+            
             RoundedRectangle(cornerRadius: 10)
                 .frame(height: 36)
                 .padding(.horizontal, 10)
@@ -104,15 +110,15 @@ struct UsageHistorySupportPage: View {
         }
         .edgesIgnoringSafeArea(.bottom)
         .navigationBarBackButtonHidden(true)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                NavigationBarLeading(previousViewName: "Profile")
-            }
-            
-            ToolbarItem(placement: .navigationBarTrailing) {
+//        .toolbar {
+//            ToolbarItem(placement: .navigationBarLeading) {
+//                NavigationBarLeading(previousViewName: "Profile")
+//            }
+//
+//            ToolbarItem(placement: .navigationBarTrailing) {
 //                NavigationBarTrailing(gotoNotificationView: $gotoNotificationView)
-            }
-        }
+//            }
+//        }
     }
 }
 

@@ -16,24 +16,30 @@ struct ProfileView: View {
     // MARK: - Body
     var body: some View {
         VStack {
+            // NavigationBar
             NavigationBar(content: {
                 Image("amberLogo")
                     .frame(width: 21, height: 33)
-            }, gotoNotificationView: $gotoNotificationView)
+            })
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {
                     // User Info
                     HStack(spacing: 12) {
+                        let imgFrame = 67/393 * DeviceInfos().deviceWidth > 80 ? 80 : 67/393 * DeviceInfos().deviceWidth
                         // Profile Picture
-                        Image(systemName: "person.circle")
-                            .resizable()
-                            .foregroundColor(Color.white)
-                            .frame(width: 65, height: 65)
-                            .overlay(
-                                Circle()
-                                    .stroke(Color.hotRed, lineWidth: 3)
-                            )
+                        ProfilePictureView(isEditProfilePicture: false, isMediaSelectionPopUp: .constant(false))
+                            .frame(width: imgFrame, height: imgFrame)
+                            .disabled(true)
+                        
+//                            Image(uiImage: image)
+//                                .resizable()
+//                                .foregroundColor(Color.white)
+//                                .frame(width: 65, height: 65)
+//                                .overlay(
+//                                    Circle()
+//                                        .stroke(Color.hotRed, lineWidth: 3)
+//                                )
                         
                         VStack(alignment: .leading, spacing: 3) {
                             Text(userInfos.userData.userFullName)
@@ -79,24 +85,24 @@ struct ProfileView: View {
                     .padding(.vertical, 10)
                     .padding(.horizontal, 16)
                     .foregroundColor(Color.white)
-                    .frame(maxWidth: .infinity, maxHeight: 86)
+                    .frame(maxWidth: .infinity)
+                    .frame(maxHeight: 86/852 * DeviceInfos().deviceHeight)
                     .background(Color.darkRed)
                     .padding(.bottom, 30)
                     
                     VStack {
                         NavigationLink(destination: InternetPackageView()) {
-                            ProfileOptionView(image: "crown", title: "Internet Packages")
-                        }
-                        NavigationLink(destination: NotificationsView(), isActive: $gotoNotificationView) {
-                            EmptyView()
-                        }
-
-                        NavigationLink(destination: AppSettingsView()) {
-                            ProfileOptionView(image: "setting", title: "App Setting")
+                            ProfileOptionView(image: "crown", title: "Internet Packages", arrowRotation: .constant(false))
                         }
                         
+                        // App Settings
                         NavigationLink(destination: AppSettingsView()) {
-                            ProfileOptionView(image: "speed.play", title: "My Wishlist")
+                            ProfileOptionView(image: "setting", title: "App Setting", arrowRotation: .constant(false))
+                        }
+                        
+                        // My Wishlist
+                        NavigationLink(destination: MyWishlistView()) {
+                            ProfileOptionView(image: "speed.play", title: "My Wishlist", arrowRotation: .constant(false))
                         }
                         
                         // Information(Expandable)
@@ -105,7 +111,7 @@ struct ProfileView: View {
                                 isShowInformation.toggle()
                             }
                         } label: {
-                            ProfileOptionView(image: "info.i", title: "Information")
+                            ProfileOptionView(image: "info.i", title: "Information", arrowRotation: $isShowInformation)
                         }
                         
                         VStack {
@@ -125,7 +131,7 @@ struct ProfileView: View {
                         }
                         
                         NavigationLink(destination: UsageHistorySupportPage()) {
-                            ProfileOptionView(image: "headphone.24:7", title: "Support")
+                            ProfileOptionView(image: "headphone.24:7", title: "Support", arrowRotation: .constant(false))
                         }
                     }
                     .padding(.horizontal, 16)

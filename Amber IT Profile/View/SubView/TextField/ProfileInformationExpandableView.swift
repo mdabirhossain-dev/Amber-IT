@@ -16,9 +16,13 @@ struct ProfileInformationExpandableView: View {
     var body: some View {
         VStack {
             HStack(spacing: 16) {
+                Circle()
+                    .fill(Color.clear)
+                    .frame(width: 22, height: 22)
+                
                 Text(title)
-                    .font(.custom(FontManager.Poppins.medium, size: 16))
-                    .foregroundColor(Color.white)
+                    .font(.custom(FontManager.Montserrat.medium, size: 12))
+                    .foregroundColor(Color(red: 0.82, green: 0.82, blue: 0.82))
                 
                 Spacer()
                 

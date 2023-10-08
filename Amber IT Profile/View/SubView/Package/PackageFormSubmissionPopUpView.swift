@@ -12,6 +12,8 @@ struct PackageFormSubmissionPopUpView: View {
     
     // Package PopUp Show/Hide
     @Binding var isPackageSubmitted: Bool
+    // Go to PackageForm
+    @Binding var isForm: Bool
     
     // MARK: - Body
     var body: some View {
@@ -35,6 +37,7 @@ struct PackageFormSubmissionPopUpView: View {
             Button {
                 withAnimation {
                     isPackageSubmitted = false
+                    isForm = false
                 }
             } label: {
                 Text("CLOSE")
@@ -68,7 +71,8 @@ struct PackageFormSubmissionPopUpView: View {
 // MARK: - Preview
 struct PackageFormSubmissionPopUpView_Previews: PreviewProvider {
     @State static var isPackageSubmitted: Bool = false
+    @State static var isForm: Bool = false
     static var previews: some View {
-        PackageFormSubmissionPopUpView(isPackageSubmitted: $isPackageSubmitted)
+        PackageFormSubmissionPopUpView(isPackageSubmitted: $isPackageSubmitted, isForm: $isForm)
     }
 }

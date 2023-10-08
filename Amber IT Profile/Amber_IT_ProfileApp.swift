@@ -15,6 +15,7 @@ struct Amber_IT_ProfileApp: App {
                 ProfileView()
             }
             .preferredColorScheme(.dark)
+            .navigationViewStyle(.stack)
         }
     }
 }

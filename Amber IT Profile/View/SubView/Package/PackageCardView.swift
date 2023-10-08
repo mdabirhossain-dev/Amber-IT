@@ -12,6 +12,9 @@ struct PackageCardView: View {
     @StateObject var packages = PackageViewModel.shared
     let package: Package
     
+    // Go to PackageForm
+    @Binding var isForm: Bool
+    
     var body: some View {
         VStack {
 //            GeometryReader { geo in
@@ -81,7 +84,9 @@ struct PackageCardView: View {
                 
                 // Registration button
                 Button {
-                    
+                    withAnimation {
+                        isForm = true
+                    }
                 } label: {
                     Text("+ GET ONLINE REGISTER")
                         .font(.custom(FontManager.Poppins.semiBold, size: 21))

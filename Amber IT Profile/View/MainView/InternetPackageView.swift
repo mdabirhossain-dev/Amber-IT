@@ -19,6 +19,7 @@ struct InternetPackageView: View {
     
     // PackageSubmissionPopUp
     @State private var isPackageSubmitted: Bool = false
+    @State private var isForm: Bool = false
         
     
     // MARK: - Body
@@ -26,20 +27,22 @@ struct InternetPackageView: View {
         ZStack {
             VStack(spacing: 25) {
                 // NavigationBar
-                HStack(spacing: 11) {
-                    Button {
-                        // Dismissing from this view
-                        presentation.wrappedValue.dismiss()
-                    } label: {
-                        Image("arrow-left")
-                            .resizable()
-                            .frame(width: 24, height: 24)
+                NavigationBar {
+                    HStack(spacing: 11) {
+                        Button {
+                            // Dismissing from this view
+                            presentation.wrappedValue.dismiss()
+                        } label: {
+                            Image("arrow-left")
+                                .resizable()
+                                .frame(width: 24, height: 24)
+                                .foregroundColor(Color.white)
+                        }
+                        
+                        Text("Packages")
+                            .font(.custom(FontManager.Poppins.semiBold, size: 18))
                     }
-                    
-                    Text("Packages")
-                        .font(.custom(FontManager.Poppins.semiBold, size: 18))
                 }
-                .frame(maxWidth: .infinity, maxHeight: 40, alignment: .leading)
                 
                 // Selection
                 GeometryReader { geo in
@@ -68,15 +71,17 @@ struct InternetPackageView: View {
                     .cornerRadius(7)
                 }
                 .frame(width: DeviceInfos().deviceWidth - 30, height: 32/852 * DeviceInfos().deviceHeight)
-    //            .padding(.horizontal, 15)
                 
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(spacing: 12) {
                         if planSelectionIndex == 0 {
-    //                            PackageListView()
-    //                                .padding(.horizontal, 25)
-                            PackageRegistrationFormView(isPackageSubmitted: $isPackageSubmitted)
-                                .padding(.horizontal, 15)
+                            if !isForm {
+                                PackageListView(isForm: $isForm)
+                                    .padding(.horizontal, 25)
+                            } else {
+                                PackageRegistrationFormView(isPackageSubmitted: $isPackageSubmitted)
+                                    .padding(.horizontal, 15)
+                            }
                         } else if planSelectionIndex == 1 {
                             PaymentHistoryListView()
                         } else {
@@ -94,7 +99,7 @@ struct InternetPackageView: View {
                 Color.black.opacity(0.7)
                     .ignoresSafeArea(.all)
                 
-                PackageFormSubmissionPopUpView(isPackageSubmitted: $isPackageSubmitted)
+                PackageFormSubmissionPopUpView(isPackageSubmitted: $isPackageSubmitted, isForm: $isForm)
             }
         }
     }
