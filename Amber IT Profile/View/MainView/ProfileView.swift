@@ -177,6 +177,8 @@ struct ProfileView: View {
             }
         }
         .preferredColorScheme(.dark)
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 

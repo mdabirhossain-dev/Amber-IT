@@ -60,7 +60,7 @@ struct AppSettingsView: View {
                             
                             Image("qrCode")
                                 .resizable()
-                                .frame(width: 123.5/392 * DeviceInfos().deviceWidth, height: 122.5/852 * DeviceInfos().deviceHeight)
+                                .frame(width: 123.5/852 * DeviceInfos().deviceHeight, height: 122.5/852 * DeviceInfos().deviceHeight)
                             
                             Button {
                                 
@@ -159,6 +159,8 @@ struct AppSettingsView: View {
             
             Spacer()
         }
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 

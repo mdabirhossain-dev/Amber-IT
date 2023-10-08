@@ -51,6 +51,7 @@ struct MyWishlistView: View {
             }
             .padding(.horizontal, 18)
         }
+        .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
     }
 }

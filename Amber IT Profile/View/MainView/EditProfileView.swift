@@ -329,6 +329,7 @@ struct EditProfileView: View {
             
         }
         .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
 //        .toolbar {
 //            ToolbarItem(placement: .navigationBarLeading) {
 //                NavigationBarLeading(previousViewName: "Profile")

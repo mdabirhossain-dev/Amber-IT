@@ -93,6 +93,7 @@ struct InternetPackageView: View {
                     Spacer()
                 }
             }
+            .navigationBarHidden(true)
             .navigationBarBackButtonHidden(true)
             
             if isPackageSubmitted {
