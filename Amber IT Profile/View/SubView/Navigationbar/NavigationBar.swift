@@ -29,21 +29,22 @@ struct NavigationBar<Content: View>: View {
             
             Spacer()
             
+            //   Something------>
             Button {
                 presentation.wrappedValue.dismiss()
             } label: {
                 Image("screenCast")
             }
             
+            // Search
             Button {
                 presentation.wrappedValue.dismiss()
             } label: {
                 Image(systemName: "magnifyingglass")
             }
             
-            Button {
-                
-            } label: {
+            // Notification
+            NavigationLink(destination: NotificationsView()) {
                 Image("bell")
                     .frame(width: 20.64, height: 22.97)
             }
