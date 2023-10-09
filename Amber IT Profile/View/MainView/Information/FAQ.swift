@@ -66,6 +66,7 @@ struct FrequentlyAskQuestions: View {
         }
         .edgesIgnoringSafeArea(.bottom)
         .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
         .navigationBarItems(leading:
          HStack{
             
