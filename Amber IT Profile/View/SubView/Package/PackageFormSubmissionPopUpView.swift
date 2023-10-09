@@ -12,6 +12,7 @@ struct PackageFormSubmissionPopUpView: View {
     
     // Package PopUp Show/Hide
     @Binding var isPackageSubmitted: Bool
+    
     // Go to PackageForm
     @Binding var isForm: Bool
     

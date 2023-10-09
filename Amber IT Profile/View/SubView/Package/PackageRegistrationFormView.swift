@@ -47,6 +47,9 @@ struct PackageRegistrationFormView: View {
     // PackageSubmissionPopUp
     @Binding var isPackageSubmitted: Bool
     
+    // Go to PackageForm
+    @Binding var isForm: Bool
+    
     
     // MARK: - Body
     var body: some View {
@@ -205,13 +208,23 @@ struct PackageRegistrationFormView: View {
                     
                     VStack(alignment: .leading, spacing: 9) {
                         TextFieldTitle(text: "Address")
-                        TextField("Address", text: $address)
-                            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-                            .padding(.horizontal, 10)
-                            .background(
-                                RoundedRectangle(cornerRadius: 5)
-                                    .stroke(Color.white, lineWidth: 1.5)
-                            )
+                        ZStack {
+                            Text(address.isEmpty ? "Address" : "")
+                                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                                .foregroundColor(Color.gray)
+                                .padding([.top, .leading], 10)
+                                
+                            
+                            TextEditor(text: $address)
+                                .frame(height: 76/852 * DeviceInfos().deviceHeight)
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .cornerRadius(5)
+                                .opacity(address.isEmpty ? 0.5 : 1)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 5)
+                                        .stroke(Color.white, lineWidth: 1.5)
+                                )
+                        }
                     }
                 }
                 
@@ -306,17 +319,31 @@ struct PackageRegistrationFormView: View {
                 }
                 .font(.custom(FontManager.Poppins.regular, size: 10))
                 
-                Button {
-                    withAnimation {
-                        isPackageSubmitted = true
+                HStack {
+                    Button {
+                        withAnimation {
+                            isForm = false
+                        }
+                    } label: {
+                        Text("Cancel")
+                            .font(.custom(FontManager.Poppins.semiBold, size: 20))
+                            .frame(width: 135/392 * DeviceInfos().deviceWidth, height: 35/852 * DeviceInfos().deviceHeight)
+                            .background(Color.gray.opacity(0.8))
                     }
-                } label: {
-                    Text("SUBMIT")
-                        .font(.custom(FontManager.Poppins.semiBold, size: 20))
-                        .frame(width: 135/392 * DeviceInfos().deviceWidth, height: 35/852 * DeviceInfos().deviceHeight)
-                        .background(Color.hotRed)
+                    .cornerRadius(5)
+                    
+                    Button {
+                        withAnimation {
+                            isPackageSubmitted = true
+                        }
+                    } label: {
+                        Text("SUBMIT")
+                            .font(.custom(FontManager.Poppins.semiBold, size: 20))
+                            .frame(width: 135/392 * DeviceInfos().deviceWidth, height: 35/852 * DeviceInfos().deviceHeight)
+                            .background(Color.hotRed)
+                    }
+                    .cornerRadius(5)
                 }
-                .cornerRadius(5)
             }
             .foregroundColor(Color.white)
 //        }
@@ -325,7 +352,8 @@ struct PackageRegistrationFormView: View {
 
 struct PackageRegistrationFormView_Previews: PreviewProvider {
     @State static var isPackageSubmitted = false
+    @State static var isForm = false
     static var previews: some View {
-        PackageRegistrationFormView(isPackageSubmitted: $isPackageSubmitted)
+        PackageRegistrationFormView(isPackageSubmitted: $isPackageSubmitted, isForm: $isForm)
     }
 }

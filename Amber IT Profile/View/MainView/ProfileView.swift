@@ -148,7 +148,7 @@ struct ProfileView: View {
                                 .frame(height: 42/853 * DeviceInfos().deviceHeight)
                                 .background(
                                     LinearGradient(gradient: Gradient(colors: [Color(UIColor(red: 0.129, green: 0.129, blue: 0.129, alpha: 0.5).cgColor), Color(UIColor(red: 0.129, green: 0.129, blue: 0.129, alpha: 1).cgColor), Color(UIColor(red: 0.129, green: 0.129, blue: 0.129, alpha: 0.5).cgColor)]), startPoint: .top, endPoint: .bottom)
-                                    .cornerRadius(13)
+                                        .cornerRadius(13)
                                 )
                                 .overlay (
                                     RoundedRectangle(cornerRadius: 13)

@@ -12,6 +12,15 @@ struct AppSettingsView: View {
     
     // Dismiss view
     @Environment(\.presentationMode) var presentation
+    
+    // Enter your Code
+    @State private var enterCode: String = ""
+    
+    // SelectedLanguage
+    @State private var selectedLanguage: String = "Select your language"
+    
+    // Data saver
+    @State private var isDataSave: Bool = true
         
     
     // MARK: - Body
@@ -72,15 +81,14 @@ struct AppSettingsView: View {
                             }
                             .cornerRadius(39)
                             
-                            Button {
-                                
-                            } label: {
-                                Text("Enter your Code")
-                                    .font(.custom(FontManager.Montserrat.light, size: 12))
-                                    .frame(width: 184/392 * DeviceInfos().deviceWidth, height: 32/852 * DeviceInfos().deviceHeight)
-                                    .background(Color.appSettingButtonBackgroundGray)
-                            }
-                            .cornerRadius(39)
+                            // Enter your code
+                            TextField("Enter your code", text: $enterCode)
+                                .padding(.horizontal, 15)
+                                .font(.custom(FontManager.Montserrat.light, size: 12))
+                                .frame(width: 184/392 * DeviceInfos().deviceWidth, height: 32/852 * DeviceInfos().deviceHeight)
+                                .multilineTextAlignment(.center)
+                                .background(Color.appSettingButtonBackgroundGray)
+                                .cornerRadius(39)   
                         }
                         
                         // Language
@@ -96,11 +104,19 @@ struct AppSettingsView: View {
                             }
                             .frame(maxWidth: .infinity, alignment: .leading)
                             
-                            Button {
-                                
+                            // Language selection
+                            Menu {
+                                ForEach(0..<language.count, id: \.self) { index in
+                                    Button {
+                                        selectedLanguage = language[index]
+                                    } label: {
+                                        Text(language[index])
+                                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                    }
+                                }
                             } label: {
                                 HStack {
-                                    Text("Select your language")
+                                    Text(selectedLanguage)
                                         .font(.custom(FontManager.Montserrat.light, size: 12))
                                     
                                     Image("arrowDownTriangle")
@@ -109,8 +125,8 @@ struct AppSettingsView: View {
                                 }
                                 .frame(width: 184/392 * DeviceInfos().deviceWidth, height: 32/852 * DeviceInfos().deviceHeight)
                                 .background(Color.appSettingButtonBackgroundGray)
+                                .cornerRadius(39)
                             }
-                            .cornerRadius(39)
                         }
                         
                         // Data Saver Mode
@@ -128,22 +144,26 @@ struct AppSettingsView: View {
                             
                             HStack(spacing: 11) {
                                 Button {
-                                    
+                                    withAnimation {
+                                        isDataSave = false
+                                    }
                                 } label: {
                                     Text("OFF")
                                         .font(.custom(FontManager.Montserrat.bold, size: 12))
                                         .frame(width: 61/392 * DeviceInfos().deviceWidth, height: 32/852 * DeviceInfos().deviceHeight)
-                                        .background(Color.appSettingButtonBackgroundGray)
+                                        .background(!isDataSave ? Color.hotRed : Color.appSettingButtonBackgroundGray)
                                 }
                                 .cornerRadius(39)
                                 
                                 Button {
-                                    
+                                    withAnimation {
+                                        isDataSave = true
+                                    }
                                 } label: {
                                     Text("ON")
                                         .font(.custom(FontManager.Montserrat.bold, size: 12))
                                         .frame(width: 61/392 * DeviceInfos().deviceWidth, height: 32/852 * DeviceInfos().deviceHeight)
-                                        .background(Color.hotRed)
+                                        .background(isDataSave ? Color.hotRed : Color.appSettingButtonBackgroundGray)
                                 }
                                 .cornerRadius(39)
                             }

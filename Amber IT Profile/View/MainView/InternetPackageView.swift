@@ -79,7 +79,7 @@ struct InternetPackageView: View {
                                 PackageListView(isForm: $isForm)
                                     .padding(.horizontal, 25)
                             } else {
-                                PackageRegistrationFormView(isPackageSubmitted: $isPackageSubmitted)
+                                PackageRegistrationFormView(isPackageSubmitted: $isPackageSubmitted, isForm: $isForm)
                                     .padding(.horizontal, 15)
                             }
                         } else if planSelectionIndex == 1 {

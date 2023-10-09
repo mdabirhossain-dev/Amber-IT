@@ -8,16 +8,31 @@
 import SwiftUI
 
 struct UsageHistorySupportPage: View {
+    // MARK: - Properties
     @State private var ticketCreate: Bool = true
     @State private var allTicket: Bool = false
     @State private var feedback: Bool = false
     @State private var gotoNotificationView: Bool = false
+    
+    // Dismiss view
+    @Environment(\.presentationMode) var presentation
+    
+    // MARK: - Body
     var body: some View {
         VStack{
             // NavigationBar
             NavigationBar(content: {
-                Image("amberLogo")
-                    .frame(width: 21, height: 33)
+                Button {
+                    // Dismissing from this view
+                    presentation.wrappedValue.dismiss()
+                } label: {
+                    Image("arrow-left")
+                        .resizable()
+                        .frame(width: 24, height: 24)
+                }
+                
+                Text("Support")
+                    .font(.custom(FontManager.Poppins.semiBold, size: 18))
             })
             
             RoundedRectangle(cornerRadius: 10)
@@ -122,6 +137,7 @@ struct UsageHistorySupportPage: View {
     }
 }
 
+// MARK: - Preview
 struct UsageHistorySupportPage_Previews: PreviewProvider {
     static var previews: some View {
         UsageHistorySupportPage()
