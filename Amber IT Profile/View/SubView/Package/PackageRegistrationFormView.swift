@@ -203,19 +203,15 @@ struct PackageRegistrationFormView: View {
                     // Address
 //                    TextFieldRoundedBorderWithTitle(title: "Address", textFieldPlaceholder: "Enter your Address", textField: $address, fieldHeight: 76/852 * DeviceInfos().deviceHeight)
                     
-                    VStack(alignment: .leading, spacing: 9){
+                    VStack(alignment: .leading, spacing: 9) {
                         TextFieldTitle(text: "Address")
-//                        GeometryReader { geo in
-                            TextField("Address", text: $address)
-//                                .textFieldRoundedBorder(rectangeHeight: 76/852 * DeviceInfos().deviceHeight)
-                                .padding(.horizontal, 10)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 5)
-                                        .stroke(Color.white, lineWidth: 1.5)
-                                        .frame(height: 76/852 * DeviceInfos().deviceHeight)
-                                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
-                                )
-//                        }
+                        TextField("Address", text: $address)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                            .padding(.horizontal, 10)
+                            .background(
+                                RoundedRectangle(cornerRadius: 5)
+                                    .stroke(Color.white, lineWidth: 1.5)
+                            )
                     }
                 }
                 
